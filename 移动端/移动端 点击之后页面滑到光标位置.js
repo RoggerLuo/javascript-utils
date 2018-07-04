@@ -18,6 +18,7 @@ $(`#${this.component._id}`).on('click', e => {
     textarea[0].focus()
 })
 
+
 // 用setTimeout解决光标到后面不显示的问题，
 $(`#${this.component._id}`).on('focus', () => {
     const val = $(`#${this.component._id}`).val()
