@@ -1,0 +1,3 @@
+
+"test": "cross-env NODE_ENV=test node dva/test/walkFiles.js | grep spec.js$ | xargs -n1 -I {} tape -r babel-register -r ./dva/test/inject.js {} | tap-difflet",
+"dva-test": "cross-env NODE_ENV=test tape -r babel-register -r ./dva/test/inject.js */test/*.spec.js | tap-difflet"

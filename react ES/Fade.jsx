@@ -14,7 +14,7 @@ const Fade = ({ show, duration, distance, children }) => (
         exited: {}
     }
     const style = state => ({...defaultStyle,...transitionStyles[state]})
-    <Transition in={show} timeout={duration}>
+    <Transition unmountOnExit in={show} timeout={duration}>
         {state => (
             <div style={style(state)}>
                 {children}
