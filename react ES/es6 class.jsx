@@ -9,13 +9,6 @@ export class Header extends React.Component {
     onkeydown(event){
         const keyCode = event.keyCode
     }
-    render(){
-        return (
-            <div className="todoapp">
-                <textarea onKeyDown={this.onkeydown} ref="myTA"></textarea>
-            </div>
-        )
-    }
     render() {
         return <input type="text" ref={this.inputRef} />;
     }
