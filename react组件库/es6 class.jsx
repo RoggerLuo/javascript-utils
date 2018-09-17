@@ -1,8 +1,8 @@
 import React from 'react'
-
-export class Header extends React.Component { 
+class App extends React.Component { 
     constructor(props) {
         super(props)
+        this.state = {}
         this.inputRef = React.createRef()
         // this.onkeydown = this.onkeydown.bind(this)
     }
@@ -10,6 +10,6 @@ export class Header extends React.Component {
         const keyCode = event.keyCode
     }
     render() {
-        return <input type="text" ref={this.inputRef} />;
+        return <input type="text" ref={this.inputRef} />
     }
 }
