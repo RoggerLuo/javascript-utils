@@ -7,7 +7,7 @@ Date.parse(new Date()) - (new Date()).getTimezoneOffset()*60*1000
 moment(new Date(), dateFormat).subtract(3,'M')
 
 
-Date.prototype.Format = function (fmt) { //author: meizz 
+Date.prototype.format = function (fmt) { //author: meizz 
     var o = {
         "M+": this.getMonth() + 1, //月份 
         "d+": this.getDate(), //日 
