@@ -13,3 +13,9 @@ class App extends React.Component {
         return <input type="text" ref={this.inputRef} />
     }
 }
+
+
+this.setTextInputRef = element => {
+
+};
+ref={this.setTextInputRef}
