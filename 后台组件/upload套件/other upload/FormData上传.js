@@ -13,6 +13,7 @@ onChange(e){
 
 
 ### 第四 如果使用fetch
+
 const body = new FormData()
 body.append('file', file)
 记得改content-type
