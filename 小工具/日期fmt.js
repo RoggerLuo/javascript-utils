@@ -24,5 +24,5 @@ Date.prototype.format = function (fmt) { //author: meizz
 }
 调用： 
 
-var time1 = new Date().Format("yyyy-MM-dd");
-var time2 = new Date().Format("yyyy-MM-dd hh:mm:ss");  
+var time1 = new Date().format("yyyy-MM-dd");
+var time2 = new Date().format("yyyy-MM-dd hh:mm:ss");  
