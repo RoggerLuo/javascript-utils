@@ -16,6 +16,12 @@ Model.create({
         query:{}
     },
     effects:{
+        * clearPagination({fetch,get,change}){
+            yield change('pagination.current',1)
+        },
+        * clearQuery({fetch,get,change}){
+            yield change('query',{})
+        },
         * get({fetch,get,change}){
             const {current,pageSize} = get().pagination
             const skip = current

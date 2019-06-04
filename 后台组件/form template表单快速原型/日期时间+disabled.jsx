@@ -1,3 +1,20 @@
+/* 标准写法 */
+<FormItem label={'有效日期'} wrapperCol={{span:20}} labelCol={{ span: 3 }}>
+    {
+        getFieldDecorator(
+            `${fieldName}.effectiveDate`,
+            {
+                rules:[{required:true,message:'必填',type:'object'}]}
+        )(
+            <DatePicker/>
+        )
+    }
+</FormItem>
+
+
+
+
+
 function disabledDate(current) {
     // Can not select days before today and today
     return current && current < moment().startOf('day')

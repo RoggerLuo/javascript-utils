@@ -9,6 +9,9 @@ const $ = Model.assign('current')
 export default Model.connect(['category','current'])(
     class CourseInfo extends React.Component { 
         componentDidMount(){ 
+            $.put({type:'clearPagination'}) // 有的时候只有切换tab才需要 清空query和page
+            $.put({type:'clearQuery'}) 
+
             $.put({type:'get'})
         }
         render() {
