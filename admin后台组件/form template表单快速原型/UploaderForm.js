@@ -1,4 +1,21 @@
 import Uploader from './Uploader'
+
+
+
+
+data._images = data.images.map(el=>{
+    return {
+        uid:el,
+        name:el+'.png',
+        status:'done',
+        response:{data:{mediaId:el}},
+        thumbUrl:`${constants.SERVER_URL_WITH_ROLE}medias/${el}`
+    }
+})    
+
+
+
+
 <Uploader 
     updateFileList={images=>{
         Model.change('upload','images1',images)
