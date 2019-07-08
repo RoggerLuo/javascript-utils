@@ -12,7 +12,17 @@
 </FormItem>
 
 
-
+<FormItem label={'活动日期'} wrapperCol={{span:13}} labelCol={{ span: 6 }}>
+    {getFieldDecorator(
+        `description`, //form字段名
+        {
+            initialValue:props[`description`]||[], 
+            rules:[{required:true,message:'必填'}],
+        },
+    )(
+        <DatePicker.RangePicker/>
+    )}
+</FormItem>
 
 
 function disabledDate(current) {

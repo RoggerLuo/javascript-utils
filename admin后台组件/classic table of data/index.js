@@ -14,6 +14,15 @@ export default Model.connect(['category','current'])(
 
             $.put({type:'get'})
         }
+        componentWillUnmount(){
+            if(window.location.hash.slice(1).indexOf('product/list') !== -1) { 
+                //子页面 保留各种条件
+            }else{ 
+                // leave 清空条件
+                $.mutate('pagination.current',1)
+                $.mutate('query',{state:-1}) //初始值需要保留
+            }
+        }
         render() {
             return (
                 <div>

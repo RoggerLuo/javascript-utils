@@ -1,5 +1,4 @@
 
-/* 通用 */
 *.DS_Store
 *.log
 */logs/
@@ -7,13 +6,11 @@
 
 
 
-/* js */
-*/node_modules/
+**/node_modules/
 
 
 
 
 
 
-/* py */
-*/__pycache__/
+**/__pycache__/

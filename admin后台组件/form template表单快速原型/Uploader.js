@@ -18,10 +18,21 @@ class PicturesWall extends React.Component {
     }
 
     handleChange = ({ fileList }) => {
-        if(fileList.some(el=>el.size > 1000000)) {
-            Message.warning('图片大小不能超过1M')            
-            return
-        }
+        if(fileList.some(el=>{
+            if(el.size > 500000){
+                Message.warning(`图片“${el.name}”的大小不能超过500K`)
+                return true
+            }
+        })) return
+            
+        if(fileList.some(el=>{
+            if(!el.type) return false
+            if(el.type.indexOf('png')===-1 && el.type.indexOf('jpeg')===-1) {
+                Message.warning(`图片“${el.name}”的格式不对，请选择png或jpg的图片上传`)
+            }
+            return el.type.indexOf('png')===-1 && el.type.indexOf('jpeg')===-1
+        })) return
+
         this.setState({ fileList })
         this.props.updateFileList && this.props.updateFileList(fileList)
         console.log(fileList)
